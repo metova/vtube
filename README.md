@@ -4,4 +4,4 @@ Vision for Youtube
 
 Building the project
 ====
-Vision utilizes the [Metova Mobile SDK](http://metova.com/x/FIAJ) for a large amount of the base code. Without this SDK and Maven plugin you will not be able to build the project. The purpose of opening this project is to provide developers with access to code samples and show what can be achieved without having to write an app entirely from scratch. If you are interested in licensing the SDK please visit [http://metova.com](http://metova.com/x/FIAJ) for more details.
+Vision utilizes the [Metova Mobile SDK](http://metova.com/x/FIAJ) for a large amount of the base code. Without this SDK and Maven plugin you will not be able to build the project. The purpose of opening this project is to provide developers with access to code samples and show what can be achieved without having to write an app entirely from scratch. If you are interested in licensing the SDK please visit [metova.com](http://metova.com/x/FIAJ) for more details.
