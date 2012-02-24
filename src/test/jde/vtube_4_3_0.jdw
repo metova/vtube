@@ -1,0 +1,12 @@
+## RIM Java Development Environment
+# RIM Workspace file
+[BuildConfigurations
+Debug
+Release
+]
+[Projects
+vtube_4_3_0.jdp
+]
+[ReleaseActiveProjects
+vtube_4_3_0.jdp
+]

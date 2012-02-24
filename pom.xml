@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>metova-mobile-parent</artifactId>
+		<groupId>org.metova</groupId>
+		<version>1.0.11-v20091125a</version>
+	</parent>
+	<version>1.0.32-SNAPSHOT</version>
+	<groupId>com.metova</groupId>
+	<artifactId>vtube</artifactId>
+	<packaging>mobile</packaging>
+	<name>Vision for YouTube</name>
+	<description>Watch YouTube videos on your BlackBerry.</description>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<releaseProfiles>release</releaseProfiles>
+					<goals>install</goals>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.metova</groupId>
+				<artifactId>metova-maven-mobile</artifactId>
+				<extensions>true</extensions>
+				<version>2.1.3</version>
+				<configuration>
+					<vendor>Metova, Inc</vendor>
+					<entryPoints>
+						<entryPoint>
+							<title>${pom.name}</title>
+							<position>1</position>
+							<icon>theme/vtube/icon-80.png</icon>
+						</entryPoint>
+					</entryPoints>
+					<platformTypeConfigurations>
+						<platformTypeConfiguration>
+							<id>rim</id>
+							<configuration>
+								<library>false</library>
+							</configuration>
+						</platformTypeConfiguration>
+					</platformTypeConfigurations>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.metova</groupId>
+			<artifactId>metova-bb-provisioning</artifactId>
+			<type>mobile</type>
+		</dependency>
+		<dependency>
+			<groupId>org.metova</groupId>
+			<artifactId>org-metova-bb-advanced-widgets</artifactId>
+			<type>mobile</type>
+		</dependency>
+		<dependency>
+			<groupId>org.metova</groupId>
+			<artifactId>org-metova-bb-biz</artifactId>
+			<type>mobile</type>
+		</dependency>
+		<dependency>
+			<groupId>org.metova</groupId>
+			<artifactId>org-metova-mobile-json</artifactId>
+			<type>mobile</type>
+		</dependency>
+	</dependencies>
+</project>

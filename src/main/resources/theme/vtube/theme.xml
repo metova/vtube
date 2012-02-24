@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme id="vtube" refId="defaultTheme" xmlns="http://metova.com/schemas/model">
+	<code>vtube</code>
+	<application>
+		<name>vtube</name>
+		<icon-sets>
+			<icon-set name="default">
+				<normal>icon-36.png</normal>
+				<rollover>icon-36.png</rollover>
+			</icon-set>
+			<icon-set name="47x47">
+				<normal>icon-47.png</normal>
+				<rollover>icon-47.png</rollover>
+			</icon-set>
+			<icon-set name="73x73">
+				<normal>icon-73.png</normal>
+				<rollover>icon-73.png</rollover>
+			</icon-set>
+			<icon-set name="80x80">
+				<normal>icon-80.png</normal>
+				<rollover>icon-80.png</rollover>
+			</icon-set>
+		</icon-sets>
+	</application>
+	<classes>
+		<class name="default-precision" ref="h4">
+			<style>
+				<attribute name="background-color">rgb(33, 24, 24)</attribute>
+				<attribute name="focus-background-color">rgb(74, 66, 66)</attribute>
+
+				<attribute name="border-color">rgb(150, 150, 150)</attribute>
+				<attribute name="focus-border-color">rgb(200, 200, 200)</attribute>
+
+				<attribute name="focus-highlight-color">rgb(175, 175, 175)</attribute>
+			</style>
+		</class>
+		<class name="TooltipManager" ref="default-precision">
+			<style>
+				<attribute name="overlap">5</attribute>
+
+				<attribute name="border">1</attribute>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="background-opacity">40</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="padding-top">3</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">7</attribute>
+				<attribute name="padding-left">5</attribute>
+			</style>
+		</class>
+		<class name="VerticalScrollbar">
+			<images>
+				<image name="arrow-up">arrow-up.png</image>
+				<image name="arrow-up-highlight">arrow-upr.png</image>
+				<image name="arrow-down">arrow-down.png</image>
+				<image name="arrow-down-highlight">arrow-downr.png</image>
+			</images>
+		</class>
+		<class name="HorizontalRule">
+			<style>
+				<attribute name="color">rgb(194, 194, 194)</attribute>
+
+				<attribute name="padding-left">5</attribute>
+				<attribute name="padding-right">5</attribute>
+			</style>
+		</class>
+		<class name="HorizontalRule-sidebar" ref="HorizontalRule">
+			<style>
+				<attribute name="color">rgb(75, 75, 75)</attribute>
+
+				<attribute name="padding-left">10</attribute>
+				<attribute name="padding-right">10</attribute>
+			</style>
+		</class>
+
+		<!--
+        
+        	container
+        	
+        -->
+		<class name="IndicatorHeaderManager" ref="default-precision">
+			<style>
+				<attribute name="background">1</attribute>
+
+				<attribute name="showClock">true</attribute>
+				<attribute name="showClock" screen="240x*">false</attribute>
+
+				<attribute name="showSignalIcon">true</attribute>
+				<attribute name="showBatteryIcon">true</attribute>
+
+				<attribute name="padding-top">2</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">2</attribute>
+				<attribute name="padding-left">5</attribute>
+			</style>
+			<images>
+
+
+				<image name="signal-wifi">signal-wifi.png</image>
+				<image name="signalSmall-default">signal-full.png</image>
+				<image name="signalSmall-dead">signal-dead.png</image>
+			</images>
+		</class>
+		<class name="BatteryStatusField">
+<!--            <style>-->
+<!--                <attribute name="edge-left">3</attribute>-->
+<!--                <attribute name="edge-right">5</attribute>-->
+<!--            </style>-->
+			<images>
+				<image name="battery-charging">battery-charging.png</image>
+				<image name="battery-default">battery-100.png</image>
+				<image name="battery-dead">battery-none.png</image>
+			</images>
+		</class>
+		<class name="Container" ref="default-precision">
+			<style>
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(60, 50, 50)</attribute>
+
+				<attribute name="margin-left">0</attribute>
+			</style>
+			<images>
+				<image name="header"></image>
+			</images>
+		</class>
+		<class name="ClockField" ref="h5">
+			<style>
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+
+		<!--
+        
+        	progress
+        	
+        -->
+		<class name="ContainerInfiniteProgressField" ref="default-precision">
+			<style>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="background-opacity">50</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+		<class name="ContainerInfiniteProgressField-label" ref="h4">
+			<style>
+				<attribute name="margin-right">5</attribute>
+				<attribute name="margin-left">5</attribute>
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="ContainerInfiniteProgressField-animation" ref="AnimatedField-small" />
+
+		<!--
+        
+        	animation
+        	
+        -->
+		<class name="AnimatedField-small">
+			<style>
+				<attribute name="frame-width">14</attribute>
+				<attribute name="frame-height">14</attribute>
+				<attribute name="frame-delay">100</attribute>
+			</style>
+			<images>
+				<image name="composite">progress-strip-14.png</image>
+			</images>
+		</class>
+		<class name="AnimatedField-medium" ref="AnimatedField-small">
+			<style>
+				<attribute name="frame-width">40</attribute>
+				<attribute name="frame-height">40</attribute>
+			</style>
+			<images>
+				<image name="composite">progress-strip-40.png</image>
+			</images>
+		</class>
+		<class name="AnimatedField-large" ref="AnimatedField-small">
+			<style>
+				<attribute name="frame-width">80</attribute>
+				<attribute name="frame-height">80</attribute>
+			</style>
+			<images>
+				<image name="composite">progress-strip-80.png</image>
+			</images>
+		</class>
+
+		<!--
+        
+        	sidebar
+        	
+        -->
+		<class name="SidebarManager" ref="default-precision">
+			<style>
+				<attribute name="border">1</attribute>
+				<attribute name="border-color">rgb(33, 24, 24)</attribute>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="focus-border">1</attribute>
+				<attribute name="focus-border-color">rgb(33, 24, 24)</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="background-opacity">80</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="focus-background">1</attribute>
+				<attribute name="focus-background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="focus-background-opacity">80</attribute>
+			</style>
+			<images>
+				<image name="arrow-up">arrow-up.png</image>
+				<image name="arrow-up-highlight">arrow-upr.png</image>
+				<image name="arrow-down">arrow-down.png</image>
+				<image name="arrow-down-highlight">arrow-downr.png</image>
+			</images>
+		</class>
+
+		<!--
+        
+        	feed display
+        	
+        -->
+		<class name="ThumbnailCarousel" ref="default-precision">
+			<style>
+				<attribute name="font-size">4</attribute>
+
+				<attribute name="border">0</attribute>
+				<attribute name="border-arc">15</attribute>
+				<attribute name="border-color">rgb(0, 0, 0)</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="background-opacity">40</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="focus-background">1</attribute>
+				<attribute name="focus-background-color">rgb(0, 0, 0)</attribute>
+				<attribute name="focus-background-opacity">80</attribute>
+
+				<attribute name="padding-top">15</attribute>
+				<attribute name="padding-bottom">15</attribute>
+
+				<attribute name="thumbnail-padding">10</attribute>
+			</style>
+			<images>
+				<image name="arrow-left">arrow-left.png</image>
+				<image name="arrow-left-highlight">arrow-leftr.png</image>
+				<image name="arrow-right">arrow-right.png</image>
+				<image name="arrow-right-highlight">arrow-rightr.png</image>
+			</images>
+		</class>
+		<class name="ThumbnailCarousel-board" ref="default-precision">
+			<style>
+				<attribute name="font-size">3</attribute>
+
+				<attribute name="background">1</attribute>
+
+				<attribute name="padding-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="ThumbnailCarousel-thumbnails">
+			<style>
+				<attribute name="high-resolution">false</attribute>
+				<attribute name="high-resolution" screen="*x320">true</attribute>
+				<attribute name="high-resolution" screen="*x360">true</attribute>
+				<attribute name="high-resolution" screen="*x480">true</attribute>
+			</style>
+		</class>
+
+		<!--
+        
+        	media carousel
+        	
+        -->
+		<class name="Media-title" ref="h3">
+			<style>
+				<attribute name="margin-right">20</attribute>
+			</style>
+		</class>
+		<class name="Media-author" ref="h5">
+			<style>
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-left">20</attribute>
+			</style>
+		</class>
+		<class name="Media-favorites" ref="Media-author">
+			<style>
+				<attribute name="color">rgb(150, 150, 150)</attribute>
+
+				<attribute name="margin-right">20</attribute>
+			</style>
+		</class>
+		<class name="Media-duration" ref="Media-favorites">
+			<style>
+				<attribute name="margin-right">10</attribute>
+				<attribute name="margin-left">10</attribute>
+			</style>
+		</class>
+		<class name="Media-progress" ref="default-precision">
+			<style>
+				<attribute name="font-size">5</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="border">1</attribute>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="margin-top">10</attribute>
+			</style>
+		</class>
+		<class name="Media-views" ref="Media-favorites" />
+		<class name="Media-desctiption" ref="h6">
+			<style>
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-left">20</attribute>
+				<attribute name="margin-right">10</attribute>
+			</style>
+		</class>
+		<class name="Media-rating" ref="h5">
+			<style>
+				<attribute name="margin-top">2</attribute>
+				<attribute name="margin-bottom">2</attribute>
+				<attribute name="margin-left">15</attribute>
+			</style>
+			<images>
+				<image name="rating-empty">rating-empty.png</image>
+				<image name="rating-full">rating-full.png</image>
+			</images>
+		</class>
+		<class name="Media-rating-count" ref="Media-favorites" />
+		<class name="MediaDescriptorField">
+			<style>
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="Media-thumbnail">
+			<style>
+				<attribute name="margin">5</attribute>
+			</style>
+		</class>
+		<class name="Media-load-animation" ref="AnimatedField-large" />
+
+		<!--
+        
+        	splash
+        	
+        -->
+		<class name="SplashScreen" ref="Container">
+			<style>
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">5</attribute>
+			</style>
+			<images>
+				<image name="splash">splash-240.png</image>
+				<image name="splash" screen="320x*">splash-320.png</image>
+				<image name="splash" screen="360x*">splash-320.png</image>
+				<image name="splash" screen="480x*">splash-480.png</image>
+				<image name="metova-logo">poweredByMetova.png</image>
+			</images>
+		</class>
+		<class name="AnimatedField-splash">
+			<style>
+				<attribute name="frame-delay">100</attribute>
+
+				<attribute name="frame-width">14</attribute>
+				<attribute name="frame-width" screen="320x*">21</attribute>
+				<attribute name="frame-width" screen="360x*">21</attribute>
+				<attribute name="frame-width" screen="480x*">28</attribute>
+
+				<attribute name="frame-height">14</attribute>
+				<attribute name="frame-height" screen="320x*">21</attribute>
+				<attribute name="frame-height" screen="360x*">21</attribute>
+				<attribute name="frame-height" screen="480x*">28</attribute>
+			</style>
+			<images>
+				<image name="composite">splash-progress-240.png</image>
+				<image name="composite" screen="320x*">splash-progress-320.png</image>
+				<image name="composite" screen="360x*">splash-progress-320.png</image>
+				<image name="composite" screen="480x*">splash-progress-480.png</image>
+			</images>
+		</class>
+
+		<!--
+        
+        	button
+        	
+        -->
+		<class name="ButtonField" ref="default-precision">
+			<style>
+				<attribute name="color">rgb(150, 150, 150)</attribute>
+
+				<attribute name="font-size">5</attribute>
+
+				<attribute name="border">1</attribute>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="padding-top">9</attribute>
+				<attribute name="padding-right">10</attribute>
+				<attribute name="padding-bottom">10</attribute>
+				<attribute name="padding-left">10</attribute>
+
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-left">0</attribute>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-margin-top" ref="ButtonField">
+			<style>
+				<attribute name="margin-top">10</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-sidebar" ref="ButtonField">
+			<style>
+				<attribute name="margin-top">0</attribute>
+				<attribute name="margin-bottom">0</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-searchGo" ref="ButtonField-sidebar">
+			<style>
+				<attribute name="padding-top">4</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">5</attribute>
+
+				<attribute name="margin-right">10</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-page" ref="ButtonField-searchGo">
+			<style>
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-bottom">4</attribute>
+
+				<attribute name="margin-top">0</attribute>
+				<attribute name="margin-right">0</attribute>
+				<attribute name="margin-bottom">0</attribute>
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-previousPage" ref="ButtonField-page">
+			<style>
+				<attribute name="margin-left">10</attribute>
+			</style>
+			<images>
+				<image name="arrow">arrow-left.png</image>
+				<image name="arrow-highlight">arrow-leftr.png</image>
+			</images>
+		</class>
+		<class name="ButtonField-nextPage" ref="ButtonField-page">
+			<style>
+				<attribute name="margin-right">10</attribute>
+			</style>
+			<images>
+				<image name="arrow">arrow-right.png</image>
+				<image name="arrow-highlight">arrow-rightr.png</image>
+			</images>
+		</class>
+		<class name="ButtonField-sendFriend" ref="ButtonField">
+			<style>
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-right">5</attribute>
+				<attribute name="margin-bottom">5</attribute>
+				<attribute name="margin-left">5</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-tip" ref="ButtonField">
+			<style>
+				<attribute name="margin-top">10</attribute>
+				<attribute name="margin-bottom">10</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-tip-left" ref="ButtonField-tip">
+			<style>
+				<attribute name="margin-right">5</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-tip-right" ref="ButtonField-tip">
+			<style>
+				<attribute name="margin-left">5</attribute>
+			</style>
+		</class>
+		<class name="ButtonField-play" ref="ButtonField">
+			<style>
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">10</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">10</attribute>
+
+				<attribute name="margin-top">0</attribute>
+				<attribute name="margin-right">5</attribute>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+			<images>
+				<image name="play">play.png</image>
+				<image name="pause">pause.png</image>
+			</images>
+		</class>
+		<class name="ButtonField-stop" ref="ButtonField">
+			<style>
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">10</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">10</attribute>
+
+				<attribute name="margin-top">0</attribute>
+				<attribute name="margin-left">5</attribute>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+			<images>
+				<image name="stop">stop.png</image>
+			</images>
+		</class>
+
+		<!--
+			
+			list field
+			
+		-->
+		<class name="ListField-feed" ref="default-precision">
+			<style>
+				<attribute name="focus-background">1</attribute>
+				<attribute name="focus-background-color">rgb(90, 90, 90)</attribute>
+
+				<attribute name="padding-right">10</attribute>
+				<attribute name="padding-left">10</attribute>
+			</style>
+		</class>
+		<class name="ListField-search" ref="ListField-feed">
+			<style>
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(60, 50, 50)</attribute>
+			</style>
+		</class>
+
+		<!--
+			
+			popup screen
+			
+		-->
+		<class name="PopupScreen" ref="default-precision">
+			<style>
+				<attribute name="background">1</attribute>
+				<attribute name="background-color">rgb(60, 50, 50)</attribute>
+			</style>
+		</class>
+
+		<!--
+        
+        	input
+        	
+        -->
+		<class name="TextBoxField" ref="default-precision">
+			<style>
+				<attribute name="background">1</attribute>
+				<attribute name="background-arc">15</attribute>
+
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="border">1</attribute>
+				<attribute name="border-arc">15</attribute>
+
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">5</attribute>
+
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-right">10</attribute>
+			</style>
+		</class>
+		<class name="TextBoxField-typeahead" ref="TextBoxField">
+			<style>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="InputBoxField-label" ref="h3">
+			<style>
+				<attribute name="margin-right">10</attribute>
+				<attribute name="margin-left">10</attribute>
+			</style>
+		</class>
+		<class name="TextAreaField" ref="TextBoxField" />
+		<class name="EditField" ref="default-precision">
+			<style>
+				<attribute name="background">1</attribute>
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="focus-highlight">1</attribute>
+
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+		<class name="EditField-typeahead" ref="EditField">
+			<style>
+				<attribute name="background-color">rgb(74, 66, 66)</attribute>
+			</style>
+		</class>
+
+		<!--
+			
+			rich text
+			
+		-->
+		<class name="RichTextField" ref="default-precision">
+			<style>
+				<attribute name="focus-highlight">1</attribute>
+			</style>
+		</class>
+
+		<!--
+        
+        	choice
+        	
+        -->
+		<class name="ChoiceField" ref="default-precision">
+			<style>
+				<attribute name="font-size">5</attribute>
+
+				<attribute name="color">rgb(150, 150, 150)</attribute>
+
+				<attribute name="border">1</attribute>
+				<attribute name="border-arc">7</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="background">1</attribute>
+				<attribute name="background-arc">7</attribute>
+
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="padding-top">6</attribute>
+				<attribute name="padding-right">10</attribute>
+				<attribute name="padding-bottom">10</attribute>
+				<attribute name="padding-left">10</attribute>
+
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-right">10</attribute>
+				<attribute name="margin-bottom">5</attribute>
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+		<class name="ChoiceSection-label" ref="InputBoxField-label" />
+
+		<!--
+        
+        	checkbox
+        	
+        -->
+		<class name="CheckboxField" ref="h4">
+			<style>
+				<attribute name="margin-top">5</attribute>
+				<attribute name="margin-bottom">5</attribute>
+			</style>
+		</class>
+		<class name="CheckboxField-section" ref="CheckboxField">
+			<style>
+				<attribute name="font-size" touchscreen="false">6</attribute>
+				<attribute name="font-size" touchscreen="true">8</attribute>
+
+				<attribute name="margin-left">0</attribute>
+			</style>
+		</class>
+		<class name="CheckboxSection-label" ref="InputBoxField-label" />
+
+		<!--
+        
+        	logos
+        	
+        -->
+		<class name="PoweredByYouTube">
+			<style>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">10</attribute>
+			</style>
+			<images>
+				<image name="youtube-logo">poweredByYouTube.png</image>
+			</images>
+		</class>
+		<class name="PoweredByYouTube-padding-right" ref="PoweredByYouTube">
+			<style>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-left">0</attribute>
+			</style>
+		</class>
+		<class name="PoweredByMetova">
+			<style>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">10</attribute>
+			</style>
+			<images>
+				<image name="metova-logo">poweredByMetova.png</image>
+			</images>
+		</class>
+
+		<!--
+			
+			action
+			
+		-->
+		<class name="ActionField" ref="default-precision">
+			<style>
+				<attribute name="font-size">5</attribute>
+
+				<attribute name="background">0</attribute>
+				<attribute name="background-arc">7</attribute>
+
+				<attribute name="focus-background">1</attribute>
+
+				<attribute name="focus-border">1</attribute>
+
+				<attribute name="padding-top">5</attribute>
+				<attribute name="padding-right">5</attribute>
+				<attribute name="padding-bottom">5</attribute>
+				<attribute name="padding-left">5</attribute>
+
+				<attribute name="margin-left">5</attribute>
+			</style>
+		</class>
+		<class name="WebNavigationField" ref="ActionField">
+			<style>
+				<attribute name="text-decoration">underline</attribute>
+				<attribute name="text-underline-style">dotted</attribute>
+			</style>
+		</class>
+		<class name="EmailActionField" ref="WebNavigationField" />
+		<class name="ActionLabelField" ref="ActionField" />
+		<class name="ScreenNavigationField" ref="ActionField" />
+
+		<!--
+			
+			labels
+			
+		-->
+		<class name="LabelField" ref="h4" />
+		<class name="AdCountdownLabel" ref="h3" />
+		<class name="Media-header-title" ref="h5">
+			<style>
+				<attribute name="color">rgb(255, 127, 0)</attribute>
+
+				<attribute name="margin-left">5</attribute>
+				<attribute name="margin-right">5</attribute>
+			</style>
+		</class>
+
+		<!-- 
+		
+			h* definitions
+			
+		-->
+		<class name="h1">
+			<style>
+				<attribute name="font-family">BBAlpha Sans</attribute>
+				<attribute name="font-size">8</attribute>
+				<attribute name="font-weight">bold</attribute>
+
+				<attribute name="color">rgb(200, 200, 200)</attribute>
+				<attribute name="focus-color">rgb(200, 200, 200)</attribute>
+
+				<attribute name="margin-top">3</attribute>
+				<attribute name="margin-bottom">3</attribute>
+				<attribute name="margin-left">10</attribute>
+			</style>
+		</class>
+		<class name="h2" ref="h1">
+			<style>
+				<attribute name="font-size">7</attribute>
+
+				<attribute name="margin-top">2</attribute>
+				<attribute name="margin-bottom">2</attribute>
+			</style>
+		</class>
+		<class name="h3" ref="h2">
+			<style>
+				<attribute name="font-size">6</attribute>
+
+				<attribute name="margin-top">1</attribute>
+				<attribute name="margin-bottom">1</attribute>
+			</style>
+		</class>
+		<class name="h4" ref="h3"><!-- normal font equivalent -->
+			<style>
+				<attribute name="font-weight">normal</attribute>
+
+				<attribute name="margin-top">0</attribute>
+				<attribute name="margin-bottom">0</attribute>
+			</style>
+		</class>
+		<class name="h5" ref="h4">
+			<style>
+				<attribute name="font-size">5</attribute>
+				<attribute name="font-weight">bold</attribute>
+			</style>
+		</class>
+		<class name="h6" ref="h5">
+			<style>
+				<attribute name="font-weight">normal</attribute>
+			</style>
+		</class>
+		<class name="h7" ref="h6">
+			<style>
+				<attribute name="font-size">4</attribute>
+			</style>
+		</class>
+	</classes>
+</theme>

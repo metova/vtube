@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/*.java" including="**/*" kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" including="**/*" kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/RIM%4.3.0"/>
+	<classpathentry kind="var" path="M2_REPO/com/metova/metova-bb-provisioning/1.0.11-v20091125a/metova-bb-provisioning-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-bb-biz/1.0.11-v20091125a/org-metova-bb-biz-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-bb-widgets/1.0.11-v20091125a/org-metova-bb-widgets-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-bb-core/1.0.11-v20091125a/org-metova-bb-core-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-core/1.0.11-v20091125a/org-metova-mobile-core-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-sdk/1.0.11-v20091125a/org-metova-mobile-sdk-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/slf4j-api/1.0.11-v20091125a/slf4j-api-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-xml/1.0.11-v20091125a/org-metova-mobile-xml-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-date/1.0.11-v20091125a/org-metova-mobile-date-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-sdk-heavy/1.0.11-v20091125a/org-metova-mobile-sdk-heavy-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-biz/1.0.11-v20091125a/org-metova-mobile-biz-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-bb-advanced-widgets/1.0.11-v20091125a/org-metova-bb-advanced-widgets-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-sdk-regex/1.0.11-v20091125a/org-metova-mobile-sdk-regex-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-richcontent/1.0.11-v20091125a/org-metova-mobile-richcontent-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/metova/org-metova-mobile-json/1.0.11-v20091125a/org-metova-mobile-json-1.0.11-v20091125a.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
