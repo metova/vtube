@@ -1,6 +1,6 @@
 Vision for Youtube
 ====
-[Vision for Youtube](http://vision.metova.com) is a BlackBerry app developed in 2009 by [Martin Reed](http://martinmreed.com) and [Metova, Inc)[http://metova.com).
+[Vision for Youtube](http://vision.metova.com) is a BlackBerry app developed in 2009 by [Martin Reed](http://martinmreed.com) and [Metova, Inc](http://metova.com).
 
 Building the project
 ====
