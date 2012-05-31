@@ -1,7 +1,7 @@
 # Vision for Youtube
 [Vision for Youtube](http://vision.metova.com) is a BlackBerry app developed in 2009 by [Martin Reed](http://martinmreed.com) and [Metova, Inc](http://metova.com).
 
-For more details about Vision, please visit [http://vision.metova.com](http://vision.metova.com). To download the app you can visit [http://vision.metova.com/download](http://vision.metova.com/download) in your mobile browser, or find the included vtube.zip.
+For more details about Vision, please visit [http://vision.metova.com](http://vision.metova.com). To download the app you can visit [http://vision.metova.com/download](http://vision.metova.com/download) in your mobile browser, or find the included [vtube.zip](https://github.com/hardisonbrewing/vtube/raw/master/vtube.zip).
 
 # BlackBerry DevCon finalist
 [Watch the presentation on YouTube](http://www.youtube.com/watch?v=v1KqwA8RMSc).
